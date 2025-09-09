@@ -63,7 +63,21 @@ public class Alumno extends Persona{
     }
 
     public String toString() {
-        return super.toString() + "\nInstitución: " + getInstitucion() + ", Nota Matemática: " + getNotaMatematica() +
-                ", Nota Historia: " + getNotaHistoria() + ", Nota Ingles: " + getNotaIngles();
+        return super.toString() +
+                "\nInstitución: " +
+                getInstitucion() +
+                ", Nota Matemática: " + getNotaMatematica() +
+                ", Nota Historia: " + getNotaHistoria() +
+                ", Nota Ingles: " + getNotaIngles() +
+                " \nPromedio: " + calcularPromedio();
+    }
+
+    public String saludar(){
+        String saludar = super.saludar();
+        return saludar + "Soy un alumno y me llamo " + getNombre();
+    }
+
+    public double calcularPromedio(){
+        return (notaMatematica + notaHistoria + notaIngles) / 3;
     }
 }

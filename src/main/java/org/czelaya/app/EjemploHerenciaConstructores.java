@@ -34,10 +34,10 @@ public class EjemploHerenciaConstructores {
         alumnoInternacional.setDireccion("Calle Chiquita 503");
         alumnoInternacional.setNotaEspaniol(9);
 
-        System.out.println("\n===== Alumno Internacional Constructor =====");
+        System.out.println("\n================ Alumno Internacional Constructor ================");
         System.out.println(alumnoInternacional);
 
-        System.out.println("===========================================================");
+        System.out.println("==================================================================");
 
         imprimir(persona);
         imprimir(alumno);
@@ -48,24 +48,30 @@ public class EjemploHerenciaConstructores {
         System.out.println("Imprimiendo datos en comun del tipo Persona:");
         System.out.println("Nombre: "+ persona.getNombre() + " " + persona.getApellido() +
                 ", Edad: " + persona.getEdad() + ", Email: " +persona.getEmail());
-        System.out.println("===========================================================");
+        System.out.println("==================================================================");
         if(persona instanceof Alumno){
             System.out.println("Imprimiendo datos del tipo Alumno:");
             System.out.println("Intitucion: "+ ((Alumno) persona).getInstitucion());
             System.out.println("Nota Matematica: "+ ((Alumno) persona).getNotaMatematica());
             System.out.println("Nota Historia: "+ ((Alumno) persona).getNotaHistoria());
             System.out.println("Nota Ingles: "+ ((Alumno) persona).getNotaIngles());
-            System.out.println("===========================================================");
+            System.out.println("==================================================================");
             if(persona instanceof AlumnoInternacional){
                 System.out.println("Imprimiendo datos del tipo Alumno Internacional:");
                 System.out.println("Pais: "+ ((AlumnoInternacional) persona).getPais());
                 System.out.println("Nota Espaniol: "+ ((AlumnoInternacional) persona).getNotaEspaniol());
-                System.out.println("===========================================================");
+                System.out.println("==================================================================");
             }
+            System.out.println("======================= Promedio del alumno ======================");
+            System.out.println(((Alumno) persona).calcularPromedio());
         }
         if (persona instanceof Profesor) {
             System.out.println("Imprimiendo datos del tipo Profesor:");
             System.out.println("Asignatura: "+ ((Profesor) persona).getAsignatura());
         }
+
+        System.out.println("======================= Sobre escritura ==========================");
+        System.out.println(persona.saludar());
+        System.out.println("==================================================================");
     }
 }

@@ -63,7 +63,14 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Nombre: " + getNombre() + " " + getApellido() + ", Edad: " + getEdad() +
-                ", Dirección: " + getDireccion() + ", Email: " + getEmail();
+        return "Nombre: " + getNombre() + " " + getApellido() +
+                ", Edad: " + getEdad() +
+                ", Dirección: " + getDireccion() +
+                ", Email: " + getEmail() +
+                "\nSaludo: " + saludar();
+    }
+
+    public String saludar(){
+        return "Hola, que tal?\n";
     }
 }
