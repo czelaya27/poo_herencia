@@ -38,5 +38,18 @@ public class Main {
         System.out.println("\n===== Persona =====");
         System.out.println(persona);
 
+        AlumnoInternacional alumnoInternacional = new AlumnoInternacional();
+        alumnoInternacional.setNombre("David");
+        alumnoInternacional.setApellido("Zelaya");
+        alumnoInternacional.setEdad(7);
+        alumnoInternacional.setDireccion("Calle Chiquita 503");
+        alumnoInternacional.setEmail("");
+        //alumnoInternacional.setInstitucion("Universidad Gerardo Barrios");
+        alumnoInternacional.setNotaEspaniol(9);
+        alumnoInternacional.setPais("El Salvador");
+
+        System.out.println("\n===== Alumno Internacional =====");
+        System.out.println(alumnoInternacional);
+
     }
 }

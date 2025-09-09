@@ -6,6 +6,30 @@ public class Alumno extends Persona{
     private double notaHistoria;
     private double notaIngles;
 
+    public Alumno() {
+    }
+
+    public Alumno(String nombre, String apellido) {
+        super(nombre, apellido);
+    }
+
+    public Alumno(String nombre, String apellido, int edad) {
+        super(nombre, apellido, edad);
+    }
+
+    public Alumno(String nombre, String apellido, int edad, String institucion) {
+        super(nombre, apellido, edad);
+        this.institucion = institucion;
+    }
+
+    public Alumno(String nombre, String apellido, int edad, String institucion, double notaMatematica,
+                  double notaHistoria, double notaIngles) {
+        this(nombre, apellido, edad, institucion);
+        this.notaMatematica = notaMatematica;
+        this.notaHistoria = notaHistoria;
+        this.notaIngles = notaIngles;
+    }
+
     public String getInstitucion() {
         return institucion;
     }
