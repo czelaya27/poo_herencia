@@ -1,17 +1,42 @@
 package org.czelaya.app;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Alumno alumno = new Alumno();
+        alumno.setNombre("Cristian");
+        alumno.setApellido("Zelaya");
+        alumno.setEdad(20);
+        alumno.setDireccion("Calle Chiquita 503");
+        alumno.setEmail("criszel94@gmail.com");
+        alumno.setInstitucion("Universidad Gerardo Barrios");
+        alumno.setNotaMatematica(9.5);
+        alumno.setNotaHistoria(8.5);
+        alumno.setNotaIngles(7.5);
+
+        System.out.println("===== Alumno =====");
+        System.out.println(alumno);
+
+        Profesor profesor = new Profesor();
+        profesor.setNombre("Stefhani");
+        profesor.setApellido("Lopez");
+        profesor.setDireccion("Pasaquina");
+        profesor.setEdad(25);
+        profesor.setEmail("fanylopez@gmail.com");
+        profesor.setAsignatura("Programación");
+
+        System.out.println("\n===== Profesor =====");
+        System.out.println(profesor);
+
+        Persona persona = new Persona();
+        persona.setNombre("Juan");
+        persona.setApellido("Perez");
+        persona.setEdad(22);
+        persona.setDireccion("Calle 123");
+        persona.setEmail("ejemplopersona@gmail.com");
+
+        System.out.println("\n===== Persona =====");
+        System.out.println(persona);
+
     }
 }
